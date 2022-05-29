@@ -21,7 +21,10 @@ var quiz = [
 var score = 0
 var timer = 100
 var startContainer = document.querySelector('#start-container')
+var buttonContainer = document.querySelector('#button-container')
 var startBtn = document.querySelector('.start')
+var nextBtn = document.querySelector('.next')
+var submitBtn = document.querySelector('.submit')
 var questionContainer = document.querySelector('#question-container')
 var questionContainer1=document.querySelector('.question-container1')
 var choiceContainer1 = document.querySelector('.choice-container1')
@@ -34,7 +37,6 @@ startBtn.addEventListener('click', function() {
     startContainer.classList.add('hidden')
     renderQuestionOne()
 })
-
 function renderQuestionOne() {
     var question = document.createElement('h1')
     question.textContent = quiz[0].question
@@ -58,7 +60,15 @@ function renderQuestionOne() {
             }
             questionContainer1.classList.add('hidden')
             choiceContainer1.classList.add('hidden')
-            renderQuestionTwo();
+
+            nextBtn.addEventListener('click',function(event){
+                if (event.key === "Next"){
+                    event.preventDefault();
+                    document.getElementsByClassName('next').click();
+                }
+                renderQuestionTwo();
+            })
+            
             
         })
     }
@@ -84,6 +94,8 @@ function renderQuestionTwo() {
                 console.log('incorrect');
                 timer -= 30
             }
+            questionContainer2.classList.add('hidden')
+            choiceContainer2.classList.add('hidden')
             renderQuestionThree()
         })
     }
