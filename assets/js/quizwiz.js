@@ -20,32 +20,29 @@ var quiz = [
 
 var score = 0
 var timer = 100
-var startContainer = document.querySelector('#start-container')
-var buttonContainer = document.querySelector('#button-container')
+var quizContainer = document.querySelector('#quiz-container')
 var startBtn = document.querySelector('.start')
-var nextBtn = document.querySelector('.next')
-var submitBtn = document.querySelector('.submit')
-var questionContainer = document.querySelector('#question-container')
-var questionContainer1=document.querySelector('.question-container1')
-var choiceContainer1 = document.querySelector('.choice-container1')
-var questionContainer2=document.querySelector('.question-container2')
-var choiceContainer2 = document.querySelector('.choice-container2')
-var questionContainer3=document.querySelector('.question-container3')
-var choiceContainer3 = document.querySelector('.choice-container3')
+var questionOne = document.querySelector('#q1')
+var questionTwo=document.querySelector('#q2')
+var questionThree = document.querySelector('#q3')
+var choiceOne = document.querySelector('.choice1')
+var choiceTwo = document.querySelector('.choice2')
+var choiceThree = document.querySelector('.choice3')
+
 
 startBtn.addEventListener('click', function() {
-    startContainer.classList.add('hidden')
+    quizContainer.classList.add('hidden')
     renderQuestionOne()
 })
 function renderQuestionOne() {
     var question = document.createElement('h1')
     question.textContent = quiz[0].question
-    questionContainer1.append(question)
+    questionOne.append(question);
 
     for (var i = 0; i < quiz[0].choices.length; i++) {
         var choices = document.createElement('button')
         choices.textContent = quiz[0].choices[i]
-        choiceContainer1.append(choices)
+        choiceOne.append(choices);
         
         choices.addEventListener('click', function(event) {
             var clicked = event.target.textContent
@@ -58,31 +55,29 @@ function renderQuestionOne() {
                 timer -= 30
 
             }
-            questionContainer1.classList.add('hidden')
-            choiceContainer1.classList.add('hidden')
-
-            nextBtn.addEventListener('click',function(event){
-                if (event.key === "Next"){
-                    event.preventDefault();
-                    document.getElementsByClassName('next').click();
-                }
-                renderQuestionTwo();
+           questionOne.classList.add('hidden')
+            choiceOne.classList.add('hidden')
+        $(".next-btn").click(function() {
+            var $parent = $(this).parent("#q1");
+            $parent.hide();
+            $parent.next().show();
+        })
+        renderQuestionTwo();
             })
             
-            
-        })
+         }
     }
-}
+
  
 function renderQuestionTwo() {
     var question = document.createElement('h1')
     question.textContent = quiz[1].question
-    questionContainer2.append(question)
+    questionTwo.append(question)
 
     for (var i = 0; i < quiz[1].choices.length; i++) {
         var choices = document.createElement('button')
         choices.textContent = quiz[1].choices[i]
-        choiceContainer2.append(choices)
+        choiceTwo.append(choices)
 
         choices.addEventListener('click',function(event) {
             var clicked = event.target.textContent
@@ -94,8 +89,8 @@ function renderQuestionTwo() {
                 console.log('incorrect');
                 timer -= 30
             }
-            questionContainer2.classList.add('hidden')
-            choiceContainer2.classList.add('hidden')
+            questionTwo.classList.add('hidden')
+            choiceTwo.classList.add('hidden')
             renderQuestionThree()
         })
     }
@@ -103,12 +98,12 @@ function renderQuestionTwo() {
 function renderQuestionThree() {
     var question = document.createElement('h1')
     question.textContent = quiz[2].question
-    questionContainer3.append(question)
+    questionThree.append(question)
 
     for (var i = 0; i < quiz[2].choices.length; i++) {
         var choices = document.createElement('button')
         choices.textContent = quiz[2].choices[i]
-        choiceContainer3.append(choices)
+        choiceThree.append(choices)
 
         choices.addEventListener('click',function(event) {
             var clicked = event.target.textContent
