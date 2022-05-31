@@ -18,7 +18,7 @@ var quiz = [
 
 
 var score = 0
-var timer = 30
+var timer = 60
 var questionIndex = 0
 var quizContainer = document.querySelector('#quiz-container')
 var startContainer = document.querySelector('#start-container')
@@ -139,6 +139,7 @@ function endQuiz() {
     questionContainer1.append(name)
 
     var submitBtn = document.createElement('button')
+    
     submitBtn.textContent = 'Submit'
     questionContainer1.append(submitBtn)
 
