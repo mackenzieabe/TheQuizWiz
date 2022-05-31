@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+    padding: 20px;
+    padding-top: 150px;
+    color: black;
+    font-size: 30px;
+}
+.highscore-container{
+    text-align: center;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: grey 0px 2px 8px 0px;
+    color:black;
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 300px;
+    min-height: 200px;
+    padding: 30px 40px;
+}
