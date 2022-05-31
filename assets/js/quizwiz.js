@@ -10,7 +10,7 @@ var quiz = [
         correct: 'square brackets'
     },
     {
-        question: "What command do you use to create a new branch on gitbash?",
+        question: "What command is used to create a new branch on gitbash?",
         choices: ['I-command-you-to-create-a-new-branch-now', 'git checkout -b <newbranchname>', 'git create new branch'],
         correct: 'git checkout -b <newbranchname>'
     }
