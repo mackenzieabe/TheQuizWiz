@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>The Quiz Wiz</title>
 </head>
+
 <body>
     <div>
         <a href="highscores.html">Highscores</a>
     </div>
 
-    <div id="start-container">
-        <h1>Code Quiz</h1>
-        <h4>Click start to begin the quiz</h4>
-        <button class="start">Start Quiz</button>
-    </div>
-      
-    <div id="quiz-container">
+    <section id="quiz-container">
+        <div id="start-container">
+            <h1>The Quiz Wiz 🧙‍♂️</h1>
+            <h4>Click Start To Begin The Quiz</h4>
+            <button class="start">Start</button>
+        </div>
+        <div class="time-container"></div>
         <div class="question-container1">
         </div>
         <div class="choice-container1">
         </div>
-        <div id="button-container">
-        <button class="next">Next</button>
-        </div>
-        <div class="question-container2">
-        </div>
-        <div class="choice-container2">
-         </div>
-         <div id="button-container">
-         <button class="next">Next</button>
-         </div>
-         <div class="question-container3">
-        </div>
-        <div class="choice-container3">
-        </div>
-        <div id="button-container">
-        <button class="submit"></button>
-        </div>
-    </div>
+    </section>
 </body>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="assets/js/quizwiz.js"></script>
+
 </html>

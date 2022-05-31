@@ -1,3 +1,48 @@
 .hidden {
     display: none;
 } 
+
+
+#quiz-container{
+background-color: hsl(0, 0%, 100%);
+border-radius: 5px;
+border-width: 1px;
+box-shadow: grey 0px 2px 8px 0px;
+color: hsl(206, 17%, 28%);
+font-size: 18px;
+margin: 0 auto;
+max-width: 800px;
+min-height: 600px;
+padding: 30px 40px;
+}
+
+#start-container{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    padding-top: 150px;
+    color: black;
+    font-size: 30px;
+} 
+
+h4 {
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+    color: black;
+    font-size: 20px;
+} 
+.start{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+} 
+.choice-container{
+    display: flex;
+    flex-direction: column;
+}
